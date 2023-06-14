@@ -1,0 +1,1191 @@
+@import url('//db.onlinewebfonts.com/c/fea31a6e7338aec52602b8c39dc16512?family=Agrandir+Thin');
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+
+/* wrong font */
+@import url("https://8font.com/agrandir-thin/");
+
+@font-face {
+    font-family: "Agrandir Grand Thin"; 
+    src: url("../font/Agrandir.otf");
+}
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --letter-spacing1: 6px;
+
+    --background-color: #FEFCF0;
+    --color-purple1: #9A64A8;
+    --color-purple2: #E9C9F2;
+    --color-yellow1: #FCC92E;
+    --color-yellow2: #FBB02B;
+
+    --font-agrandir2: "Agrandir Thin", sans-serif;
+    --font-agrandir: "Agrandir Grand Thin";
+    --font-bebas: 'Bebas Neue', sans-serif;
+    --font-open: 'Open Sauce Sans', sans-serif;
+}
+
+
+
+
+label.cb,
+label.cb > p{
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 1rem;
+}
+label.cb > input{
+    display: none;
+}
+label.cb > input + p::before{
+    opacity: 1;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2.5px solid white;
+}
+
+
+label.cb > input + p:hover:before,
+label.cb > input + p:focus:before{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+label.cb > input:checked + p::before{
+    background-color: white;
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: var(--color-yellow1);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 40px;
+    background: var(--color-yellow2);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 40px;
+    background: var(--color-yellow2);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 11in;
+    height: 8in;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-header > section > img{
+    width: 80px;
+    height: 80px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.page-header > nav{
+    display: flex;
+    align-items: start;
+    border-bottom: 3px solid  var(--color-purple1);
+    align-self: flex-start;
+}
+.page-header > nav > a:nth-child(2){
+    display: flex;
+}
+.page-header > nav > a:nth-child(2) > p:nth-child(2){
+    font-size: 3.2pt;
+    letter-spacing:normal;
+}
+.page-header > nav > a{
+    text-decoration: none;
+    color: black;
+    padding: 0.6rem 1rem;  
+    transition: background-color ease-out .3s;
+    font: 13pt var(--font-bebas);
+    font-weight: 550;
+    letter-spacing: var(--letter-spacing1);
+}
+.page-header > nav > a:hover,
+.page-header > nav > a:focus{
+        background-color: var(--color-purple2);
+}
+
+.page-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.page-footer > button{
+    padding: .25rem 2.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--color-purple2);
+    border-radius: 50px;
+    border: 1px solid transparent;
+    font-family: var(--font-bebas);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    font-size: 14pt;
+}
+.page-footer > button:hover,
+.page-footer > button:focus{
+    border: 1px solid black;
+}
+.page-footer > section {
+    display: flex;
+    align-items: center;
+}
+.page-footer > section > #star{
+    width: 15px;
+}
+.page-footer > section > button{
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+.page-footer > section > button:hover,
+.page-footer > section > button:focus{
+    background-color: var(--color-purple2);
+}
+.page-footer > section > button > i{
+    font-size: smaller;
+}
+
+
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title > section{
+    font-family: var(--font-agrandir);
+    font-weight: 900;
+    font-size: 42.4pt;
+    display: flex;
+    position: relative;
+}
+.main-title > section:nth-child(2){
+    position: relative;
+    top: -25px;
+}
+.main-title > section:nth-child(1) > p:nth-child(2){
+    position: absolute;
+    font-size: 20pt;
+    left: 100pt;
+}
+.main-title > section:nth-child(2) > p:nth-child(2){
+    font-size: 3.2pt;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+
+/* .page > .form {
+    min-width: 80%;
+} */
+.page > .form > .title{
+    font-family: var(--font-bebas);
+    font-size: 24pt;
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    text-align: center;
+}
+.page > .form > .sub-title{
+    font-family: var(--font-bebas);
+    font-size: 15pt;
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    text-align: center;
+}
+.page > .form > .body{
+    font-family: var(--font-open);
+    font-size: 15pt;    
+    text-align: center;
+    max-width: 600px;
+}
+.page > .form > .rectangle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-purple2);
+    /* padding: 2rem;
+    min-width: 60%; */
+}
+.page > .form > .rectangle > .rectangle-title{
+    font-family: var(--font-bebas);
+    letter-spacing: var(--letter-spacing1);
+    font-size: 20pt;
+    font-weight: 600;
+    
+    display: flex;
+    justify-content: center;
+}
+.page > .form > .rectangle > .rectangle-body{
+    font-family: var(--font-open);
+    font-size: 12pt;
+    font-weight: 600;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span.box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color-purple2);
+    /* padding: 1rem 2rem;
+    min-width: 160px;
+    min-height: 120px; */
+}
+span.box section:nth-child(1){
+    font-family: var(--font-bebas);
+    font-size: 13pt;
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    text-align: center;
+}
+span.box section:nth-child(2){
+    font-family: var(--font-open);
+    font-size: 11pt;
+}
+
+
+
+.page-1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-bebas);
+    gap: 1rem;
+}
+.page-1 > section:nth-child(1){
+    font-size: 16pt;
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+}
+.page-1 > section:nth-child(2){
+    display: flex;
+    gap: 1rem;
+}
+.page-1 > section:nth-child(2) input{
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-yellow1);
+    font-size: 16pt;
+}
+.page-1 > section:nth-child(2) button{
+    border: 1px solid transparent;;
+    outline: none;
+    padding: 1rem 2rem;
+    background-color: var(--color-purple2);
+    border-radius: 50px;
+    letter-spacing: var(--letter-spacing1);
+    text-align: center;
+    font-family: var(--font-bebas);
+    font-weight: 600;
+    font-size: 16pt;
+}
+.page-1 > section:nth-child(2) button:hover,
+.page-1 > section:nth-child(2) button:focus{
+    border: 1px solid black;
+}
+
+.page-2{
+    gap: 2rem;
+}
+.page-2 .form{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.page-2 .form > section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.page-2 .form > section > span{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+.page-2 .form > section > span > label,
+.page-2 .form > section > span > input,
+.page-2 .form > section > span > select{
+    font-family: var(--font-bebas);
+}
+.page-2 .form > section > span > label{
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    font-size: 16pt;
+}
+.page-2 .form > section > span > input,
+.page-2 .form > section > span > select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--color-purple2);
+    padding: .5rem 0;
+    font-size: 13pt;
+}
+
+.page-3 .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.page-3 .form > section.intro{
+    font-family: var(--font-open);
+    font-size: 20pt;
+    text-align: center;
+    max-width: 600px;
+}
+.page-3 .form > section#p3-btn{
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    background-color: var(--color-purple2);
+    border-radius: 50px;
+    letter-spacing: var(--letter-spacing1);
+    text-align: center;
+    font-family: var(--font-bebas);
+    font-weight: 550;
+    font-size: 21pt;
+}
+
+.page-4 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-4 > .form > div{
+    display: flex;
+    gap: 1rem;
+}
+.page-4 > .form > div > span.box > section > ul > li {
+    font-weight: 600;
+}
+.page-4 span.box{
+    padding: 1rem 2rem;
+    min-width: 160px;
+    min-height: 120px;
+}
+
+.page-5 > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-5 > .form > section {
+    display: flex;
+    justify-content: center;
+}
+.page-5 > .form > section > img{
+    height: 200px;
+}
+.page-5 > .form > .body {
+    max-width: 625px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-6 > .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+.page-6 > .form > section{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+.page-6 > .form > section > span.box {
+    width: 210px;
+    height: 210px;
+    justify-content: center;
+}
+.page-6 > .form > section > span.box > section {
+    font-size: 20pt;
+}
+
+
+
+.page-7 > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+.page-7 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-7 >.form > section > span.input {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-7 >.form > section > span > input {
+    margin-right: 1.5rem;
+}
+.page-7 >.form > section > img{
+    width: 70%;
+}
+.page-7 > .form > .rectangle {
+    gap: 0;
+}
+.page-7 > .form > .rectangle > .rectangle-title,
+.page-7 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-7 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-7 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+
+.page-8 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-8 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-8 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 4rem;
+}
+
+.page-9 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-9 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-9 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-9 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-9 > .form > .rectangle > .rectangle-title,
+.page-9 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-9 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-9 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+
+.page-10 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.page-10 > .form > .rectangle {
+    display: flex;
+    grid-area: 1rem;
+    padding: 3rem 1rem;
+}
+.page-10 > .form > .rectangle.text-area{
+    min-width: 700px;
+    padding: 1rem;
+}
+.page-10 > .form > .rectangle > .rectangle-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8rem;
+    /* margin: 1rem 2rem; */
+}
+.page-10 > .form > .rectangle > .rectangle-body > section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-10 > .form > .rectangle > .rectangle-body,
+.page-10 > .form > .rectangle > .rectangle-body > textarea {
+    width: 100%;
+    resize: none;
+}
+.page-10 > .form > .rectangle > .rectangle-body > textarea{
+    font-family: var(--font-open);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 13pt;
+}
+
+.page-11 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-11 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-11 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-11 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-11 > .form > .rectangle > .rectangle-title,
+.page-11 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-11 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-11 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+.page-12 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-12 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-12 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
+.page-12 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.page-13 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-13 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-13 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-13 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-13 > .form > .rectangle > .rectangle-title,
+.page-13 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-13 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-13 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+.page-14 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-14 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-14 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
+.page-14 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.page-15 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-15 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-15 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-15 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-15 > .form > .rectangle > .rectangle-title,
+.page-15 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-15 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-15 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+
+.page-16 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-16 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-16 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
+.page-16 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.page-17 label.cb > input + p::before{
+    border: 2.5px solid var(--color-yellow2);
+}
+.page-17 label.cb > input + p:hover:before,
+.page-17 label.cb > input + p:focus:before{
+    background-color: rgb(255, 255, 124);
+}
+.page-17 label.cb > input:checked + p::before{
+    background-color: var(--color-yellow1);
+}
+
+.page-17 > .form > .body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-17 > .form > .body > span{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5rem;
+}
+.page-17 > .form > .body > span.choices-title{
+    font-family: var(--font-open);
+    font-weight: 900;
+}
+.page-17 > .form > .body > span.choices-title p:nth-child(1){
+    color: var(--color-yellow2);
+}
+.page-17 > .form > .body > span.choices-title p:nth-child(2){
+    color: var(--color-purple1);
+}
+.page-17 > .form > .body > span.choices{
+    margin-right: .7rem;
+}
+.page-17 > .form > .body > span.choices > p {
+    white-space: nowrap;
+    font-family: var(--font-open);
+}
+
+
+.page-18 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-18 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-18 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-18 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-18 > .form > .rectangle > .rectangle-title,
+.page-18 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-18 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-18 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+.page-18 > .form > section:nth-child(5){
+    font-family: var(--font-bebas);
+    font: bold 15pt var(--font-bebas);
+    letter-spacing: var(--letter-spacing1);
+    background-color: var(--color-yellow1);
+    padding: .5rem 5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.page-19 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-19 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-19 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
+.page-19 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-20 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-20 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-20 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-20 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-20 > .form > .rectangle > .rectangle-title,
+.page-20 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-20 > .form > .rectangle > .rectangle-title{
+    margin-top: 3rem;
+}
+.page-20 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 3rem;
+}
+
+.page-21 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-21 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+}
+.page-21 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
+.page-21 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-22 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.page-22 > .form > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-22 > .form > section:nth-child(4){
+    width: 100%;
+}
+.page-22 >.form > section > span.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-22 > .form > .rectangle > .rectangle-title,
+.page-22 > .form > .rectangle > .rectangle-body{
+    margin: 0 5rem;
+}
+.page-22 > .form > .rectangle > .rectangle-title{
+    margin-top: 2.5rem;
+}
+.page-22 > .form > .rectangle > .rectangle-body{
+    margin-bottom: 2.5rem;
+}
+
+
+.page-23 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-23 > .form > .rectangle{
+    margin-top: 2rem;
+    padding: 0;
+    min-width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.page-23 > .form > .rectangle > img{
+    position: absolute;
+    right: -3rem;
+    bottom: -1rem;
+    height: 15rem;
+}
+.page-23 > .form > .rectangle > .rectangle-body{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 6rem 3rem;
+}
+.page-23 > .form > .rectangle > .rectangle-body > section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.page-24 > .form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page-25 > .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.page-25 > .form > section {
+    display: flex;
+    gap: 10px;
+}
+.page-25 > .form > section > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem;
+    width: 200px;
+    font: bold 8pt var(--font-open);
+    white-space: nowrap;
+    gap: 5px;
+}
+.page-25 > .form > section > span:nth-child(1){background-color: var(--color-purple2); align-items: center;}
+.page-25 > .form > section > span:nth-child(2){background-color: var(--color-yellow2); align-items: center;}
+.page-25 > .form > section > span:nth-child(3){background-color: var(--color-yellow1);}
+
+.page-25 label.cb > input + p::before{
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid white;
+}
+.page-25 .main-title > section{
+    font: bold 32.4pt var(--font-agrandir)
+}
+
+
+
+.page-26 > .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page-26 > .form > .body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.page-26 > .form > .body > .p26-row{
+    display: flex;
+    font: 10pt var(--font-open);
+    gap: 1rem;
+}
+.page-26 > .form > .body > .p26-row:nth-child(1) > .square{ background-color: var(--color-purple2);}
+.page-26 > .form > .body > .p26-row:nth-child(2) > .square{ background-color: var(--color-yellow2);}
+.page-26 > .form > .body > .p26-row:nth-child(3) > .square{ background-color: var(--color-yellow1);}
+
+.page-26 > .form > .body > .p26-row > .square{
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    align-items: center;
+    width: 250px;
+}
+.page-26 > .form > .body > .p26-row > .square > .square-title{
+    font: bold 15pt var(--font-bebas);
+    letter-spacing: var(--letter-spacing1);
+}
+.page-26 .body.text-area{
+    align-self: stretch;
+    background-color: var(--color-purple2);
+}
+.page-26 >.form > .body > textarea{
+    margin: 1rem;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.page-26 label.cb > input + p::before{
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid white;
+}
+.page-26 label.cb p{
+    gap: 5px;
+}
+
+
+.page-27 > .form > p{
+    font: 31.5pt var(--font-bebas);
+    letter-spacing: 15px;
+}
+
+
+
+.page-28 > .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-28 > .form > section{
+    display: flex;
+    gap: 1rem;
+}
+
+.page-28 > .form > section > button{
+    padding: .25rem 2.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--color-purple2);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-family: var(--font-bebas);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing1);
+    font-size: 14pt;
+}
+.page-28 > .form > section > button:hover,
+.page-28 > .form > section > button:focus{
+    border: 1px solid black;
+}
+
+
+
+
+.word-def > .word > section{
+    display: flex;
+    align-items: end;
+}
+.word-def > .word > section > p{
+    font: 550 25pt var(--font-bebas);
+    letter-spacing: 15px;
+}
+.word-def > .word > section > .noun{
+    font: italic 13pt var(--font-agrandir)
+}
+
+.word-def > .word > .description{
+    font: 13.7pt var(--font-open);
+    line-height: 2rem;
+}
+
+.word-def > .word > .description > u{
+    color: var(--color-purple1);
+    text-decoration: none;
+}
+
+
+
+
+.powered-by{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    font: 900 10pt var(--font-bebas);
+    letter-spacing: 10px
+}
+
+.powered-by > img {
+    height: 30px;
+}
+
+
+.hidden{
+    display: none;
+}
